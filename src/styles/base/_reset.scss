@@ -1,0 +1,32 @@
+/* we are using reset ruls of bootstrap,
+if you need anything override it here 
+or add new */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  @include respond-to(sm) {
+    font-size: 75%;
+  }
+}
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

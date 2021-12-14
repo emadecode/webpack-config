@@ -1,0 +1,70 @@
+.gi-side-menu {
+  position: fixed;
+  z-index: 1051;
+  background-color: #333333;
+  top: 0;
+  bottom: 0;
+  width: 65%;
+  height: 100%;
+  right: -65%;
+  transition: all 100ms ease-in-out;
+  @include respond-to(lg) {
+    transition: all 300ms ease-in-out;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem;
+  }
+  &__body {
+    padding: 1rem 3rem;
+  }
+  &.active {
+    right: 0;
+  }
+  @include respond-to(md) {
+    width: 25rem;
+  }
+}
+@include ltr {
+  .gi-side-menu {
+    right: auto;
+    left: -65%;
+    &.active {
+      left: 0;
+    }
+  }
+}
+.gi-side-menu-close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  justify-self: flex-end;
+  cursor: pointer;
+  &__icon {
+    width: 1.5rem;
+  }
+}
+
+.gi-side-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__item {
+    display: block;
+    border-bottom: 1px solid #4d4d4d;
+    padding: 0.5rem 0;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #dedede;
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: $font-w-light;
+    &:hover {
+      color: #dedede;
+    }
+  }
+}

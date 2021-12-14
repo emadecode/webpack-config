@@ -1,0 +1,5 @@
+defaults
+last 2 version
+not dead
+iOS >= 9
+IE 10

@@ -1,0 +1,106 @@
+/*=============================================
+    =    Start Header Style     =
+=============================================*/
+.main-header {
+  padding: 1rem 2rem;
+}
+
+.action-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+  @include respond-to(lg) {
+    padding: 1rem 2rem;
+  }
+  &__tools {
+    display: flex;
+    align-items: center;
+  }
+}
+.select-language {
+  user-select: none;
+  &__link {
+    font-size: 1.1rem;
+    color: #8f8f8f;
+    user-select: none;
+    text-decoration: none;
+  }
+}
+
+.user-auth {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  &__icon {
+    max-width: 2.7rem;
+  }
+  &__text {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: $font-w-light;
+  }
+}
+
+.menu-button {
+  user-select: none;
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  z-index: 1;
+  margin: auto;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &__icon {
+    max-width: 1.8rem;
+  }
+}
+
+@include rtl {
+  .menu-button {
+    margin-right: 1rem;
+    margin-left: 1.1rem;
+    @include respond-to(lg) {
+      margin-right: 0.4rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
+@include ltr {
+  .menu-button {
+    margin-left: 1rem;
+    margin-right: 1.1rem;
+    @include respond-to(lg) {
+      margin-left: 0.4rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.top-search-button {
+  user-select: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    box-shadow: none;
+  }
+  &__icon {
+    max-width: 1.5rem;
+  }
+}
+.header-v-separator {
+  user-select: none;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #e7e7e7;
+}
+/*=======  End Of Header Style  ========*/
